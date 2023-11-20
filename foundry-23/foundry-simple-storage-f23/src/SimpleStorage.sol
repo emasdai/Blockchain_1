@@ -4,7 +4,7 @@ pragma solidity ^0.8.18; // versi 0.8.18 atau lebih
 
 contract SimpleStorage {
     uint public MyfavoritNumber; // 0 
-
+    
     struct Person{
         uint favoritNumber;
         string name;
@@ -24,7 +24,7 @@ contract SimpleStorage {
     function addPerson(string memory _name, uint _favoriteNumber ) public {
         listofPeople.push(Person(_favoriteNumber, _name));
         NametoFavoriteNumber[_name] = _favoriteNumber;  // for searching someone's favorite number
-    }
+    } 
 
 }
 
