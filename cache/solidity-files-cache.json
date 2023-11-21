@@ -1,0 +1,734 @@
+{
+  "_format": "ethers-rs-sol-cache-3",
+  "paths": {
+    "artifacts": "out",
+    "build_infos": "out/build-info",
+    "sources": "src",
+    "tests": "test",
+    "scripts": "script",
+    "libraries": [
+      "lib"
+    ]
+  },
+  "files": {
+    "foundry-23/foundry-simple-storage-f23/lib/forge-std/src/Base.sol": {
+      "lastModificationDate": 1700549042906,
+      "contentHash": "ee13c050b1914464f1d3f90cde90204b",
+      "sourceName": "foundry-23/foundry-simple-storage-f23/lib/forge-std/src/Base.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "metadata": {
+            "useLiteralContent": false,
+            "bytecodeHash": "ipfs",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "paris",
+          "libraries": {}
+        }
+      },
+      "imports": [
+        "foundry-23/foundry-simple-storage-f23/lib/forge-std/src/StdStorage.sol",
+        "foundry-23/foundry-simple-storage-f23/lib/forge-std/src/Vm.sol"
+      ],
+      "versionRequirement": ">=0.6.2, <0.9.0",
+      "artifacts": {
+        "CommonBase": {
+          "0.8.19+commit.7dd6d404.Linux.gcc": "Base.sol/CommonBase.json"
+        },
+        "ScriptBase": {
+          "0.8.19+commit.7dd6d404.Linux.gcc": "Base.sol/ScriptBase.json"
+        },
+        "TestBase": {
+          "0.8.19+commit.7dd6d404.Linux.gcc": "Base.sol/TestBase.json"
+        }
+      }
+    },
+    "foundry-23/foundry-simple-storage-f23/lib/forge-std/src/Script.sol": {
+      "lastModificationDate": 1700549042906,
+      "contentHash": "ba325c778a7da8a21c2136aa32763c14",
+      "sourceName": "foundry-23/foundry-simple-storage-f23/lib/forge-std/src/Script.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "metadata": {
+            "useLiteralContent": false,
+            "bytecodeHash": "ipfs",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "paris",
+          "libraries": {}
+        }
+      },
+      "imports": [
+        "foundry-23/foundry-simple-storage-f23/lib/forge-std/src/Base.sol",
+        "foundry-23/foundry-simple-storage-f23/lib/forge-std/src/StdChains.sol",
+        "foundry-23/foundry-simple-storage-f23/lib/forge-std/src/StdCheats.sol",
+        "foundry-23/foundry-simple-storage-f23/lib/forge-std/src/StdJson.sol",
+        "foundry-23/foundry-simple-storage-f23/lib/forge-std/src/StdMath.sol",
+        "foundry-23/foundry-simple-storage-f23/lib/forge-std/src/StdStorage.sol",
+        "foundry-23/foundry-simple-storage-f23/lib/forge-std/src/StdStyle.sol",
+        "foundry-23/foundry-simple-storage-f23/lib/forge-std/src/StdUtils.sol",
+        "foundry-23/foundry-simple-storage-f23/lib/forge-std/src/Vm.sol",
+        "foundry-23/foundry-simple-storage-f23/lib/forge-std/src/console.sol",
+        "foundry-23/foundry-simple-storage-f23/lib/forge-std/src/console2.sol",
+        "foundry-23/foundry-simple-storage-f23/lib/forge-std/src/interfaces/IMulticall3.sol",
+        "foundry-23/foundry-simple-storage-f23/lib/forge-std/src/safeconsole.sol"
+      ],
+      "versionRequirement": ">=0.6.2, <0.9.0",
+      "artifacts": {
+        "Script": {
+          "0.8.19+commit.7dd6d404.Linux.gcc": "Script.sol/Script.json"
+        }
+      }
+    },
+    "foundry-23/foundry-simple-storage-f23/lib/forge-std/src/StdChains.sol": {
+      "lastModificationDate": 1700549042906,
+      "contentHash": "266a53b71b3a6b9c6c1d7e7763610cb8",
+      "sourceName": "foundry-23/foundry-simple-storage-f23/lib/forge-std/src/StdChains.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "metadata": {
+            "useLiteralContent": false,
+            "bytecodeHash": "ipfs",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "paris",
+          "libraries": {}
+        }
+      },
+      "imports": [
+        "foundry-23/foundry-simple-storage-f23/lib/forge-std/src/Vm.sol"
+      ],
+      "versionRequirement": ">=0.6.2, <0.9.0",
+      "artifacts": {
+        "StdChains": {
+          "0.8.19+commit.7dd6d404.Linux.gcc": "StdChains.sol/StdChains.json"
+        }
+      }
+    },
+    "foundry-23/foundry-simple-storage-f23/lib/forge-std/src/StdCheats.sol": {
+      "lastModificationDate": 1700549042906,
+      "contentHash": "d984e2c76dae07bac1e292af2a5d4fd1",
+      "sourceName": "foundry-23/foundry-simple-storage-f23/lib/forge-std/src/StdCheats.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "metadata": {
+            "useLiteralContent": false,
+            "bytecodeHash": "ipfs",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "paris",
+          "libraries": {}
+        }
+      },
+      "imports": [
+        "foundry-23/foundry-simple-storage-f23/lib/forge-std/src/StdStorage.sol",
+        "foundry-23/foundry-simple-storage-f23/lib/forge-std/src/Vm.sol",
+        "foundry-23/foundry-simple-storage-f23/lib/forge-std/src/console2.sol"
+      ],
+      "versionRequirement": ">=0.6.2, <0.9.0",
+      "artifacts": {
+        "StdCheats": {
+          "0.8.19+commit.7dd6d404.Linux.gcc": "StdCheats.sol/StdCheats.json"
+        },
+        "StdCheatsSafe": {
+          "0.8.19+commit.7dd6d404.Linux.gcc": "StdCheats.sol/StdCheatsSafe.json"
+        }
+      }
+    },
+    "foundry-23/foundry-simple-storage-f23/lib/forge-std/src/StdJson.sol": {
+      "lastModificationDate": 1700549042906,
+      "contentHash": "a341308627b7eeab7589534daad58186",
+      "sourceName": "foundry-23/foundry-simple-storage-f23/lib/forge-std/src/StdJson.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "metadata": {
+            "useLiteralContent": false,
+            "bytecodeHash": "ipfs",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "paris",
+          "libraries": {}
+        }
+      },
+      "imports": [
+        "foundry-23/foundry-simple-storage-f23/lib/forge-std/src/Vm.sol"
+      ],
+      "versionRequirement": ">=0.6.0, <0.9.0",
+      "artifacts": {
+        "stdJson": {
+          "0.8.19+commit.7dd6d404.Linux.gcc": "StdJson.sol/stdJson.json"
+        }
+      }
+    },
+    "foundry-23/foundry-simple-storage-f23/lib/forge-std/src/StdMath.sol": {
+      "lastModificationDate": 1700549042906,
+      "contentHash": "9da8f453eba6bb98f3d75bc6822bfb29",
+      "sourceName": "foundry-23/foundry-simple-storage-f23/lib/forge-std/src/StdMath.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "metadata": {
+            "useLiteralContent": false,
+            "bytecodeHash": "ipfs",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "paris",
+          "libraries": {}
+        }
+      },
+      "imports": [],
+      "versionRequirement": ">=0.6.2, <0.9.0",
+      "artifacts": {
+        "stdMath": {
+          "0.8.19+commit.7dd6d404.Linux.gcc": "StdMath.sol/stdMath.json"
+        }
+      }
+    },
+    "foundry-23/foundry-simple-storage-f23/lib/forge-std/src/StdStorage.sol": {
+      "lastModificationDate": 1700549042906,
+      "contentHash": "abd6f3379e6e2a7979b18abc21aea0c1",
+      "sourceName": "foundry-23/foundry-simple-storage-f23/lib/forge-std/src/StdStorage.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "metadata": {
+            "useLiteralContent": false,
+            "bytecodeHash": "ipfs",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "paris",
+          "libraries": {}
+        }
+      },
+      "imports": [
+        "foundry-23/foundry-simple-storage-f23/lib/forge-std/src/Vm.sol"
+      ],
+      "versionRequirement": ">=0.6.2, <0.9.0",
+      "artifacts": {
+        "stdStorage": {
+          "0.8.19+commit.7dd6d404.Linux.gcc": "StdStorage.sol/stdStorage.json"
+        },
+        "stdStorageSafe": {
+          "0.8.19+commit.7dd6d404.Linux.gcc": "StdStorage.sol/stdStorageSafe.json"
+        }
+      }
+    },
+    "foundry-23/foundry-simple-storage-f23/lib/forge-std/src/StdStyle.sol": {
+      "lastModificationDate": 1700549042906,
+      "contentHash": "6281165a12aa639705c691fccefd855e",
+      "sourceName": "foundry-23/foundry-simple-storage-f23/lib/forge-std/src/StdStyle.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "metadata": {
+            "useLiteralContent": false,
+            "bytecodeHash": "ipfs",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "paris",
+          "libraries": {}
+        }
+      },
+      "imports": [
+        "foundry-23/foundry-simple-storage-f23/lib/forge-std/src/Vm.sol"
+      ],
+      "versionRequirement": ">=0.4.22, <0.9.0",
+      "artifacts": {
+        "StdStyle": {
+          "0.8.19+commit.7dd6d404.Linux.gcc": "StdStyle.sol/StdStyle.json"
+        }
+      }
+    },
+    "foundry-23/foundry-simple-storage-f23/lib/forge-std/src/StdUtils.sol": {
+      "lastModificationDate": 1700549042906,
+      "contentHash": "3ce83748fd76644688f916c9cced545b",
+      "sourceName": "foundry-23/foundry-simple-storage-f23/lib/forge-std/src/StdUtils.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "metadata": {
+            "useLiteralContent": false,
+            "bytecodeHash": "ipfs",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "paris",
+          "libraries": {}
+        }
+      },
+      "imports": [
+        "foundry-23/foundry-simple-storage-f23/lib/forge-std/src/Vm.sol",
+        "foundry-23/foundry-simple-storage-f23/lib/forge-std/src/interfaces/IMulticall3.sol"
+      ],
+      "versionRequirement": ">=0.6.2, <0.9.0",
+      "artifacts": {
+        "StdUtils": {
+          "0.8.19+commit.7dd6d404.Linux.gcc": "StdUtils.sol/StdUtils.json"
+        }
+      }
+    },
+    "foundry-23/foundry-simple-storage-f23/lib/forge-std/src/Vm.sol": {
+      "lastModificationDate": 1700549042906,
+      "contentHash": "897d4fc21ee1b7d2d10b9ad9b55ce75d",
+      "sourceName": "foundry-23/foundry-simple-storage-f23/lib/forge-std/src/Vm.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "metadata": {
+            "useLiteralContent": false,
+            "bytecodeHash": "ipfs",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "paris",
+          "libraries": {}
+        }
+      },
+      "imports": [],
+      "versionRequirement": ">=0.6.2, <0.9.0",
+      "artifacts": {
+        "Vm": {
+          "0.8.19+commit.7dd6d404.Linux.gcc": "Vm.sol/Vm.json"
+        },
+        "VmSafe": {
+          "0.8.19+commit.7dd6d404.Linux.gcc": "Vm.sol/VmSafe.json"
+        }
+      }
+    },
+    "foundry-23/foundry-simple-storage-f23/lib/forge-std/src/console.sol": {
+      "lastModificationDate": 1700549042906,
+      "contentHash": "100b8a33b917da1147740d7ab8b0ded3",
+      "sourceName": "foundry-23/foundry-simple-storage-f23/lib/forge-std/src/console.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "metadata": {
+            "useLiteralContent": false,
+            "bytecodeHash": "ipfs",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "paris",
+          "libraries": {}
+        }
+      },
+      "imports": [],
+      "versionRequirement": ">=0.4.22, <0.9.0",
+      "artifacts": {
+        "console": {
+          "0.8.19+commit.7dd6d404.Linux.gcc": "console.sol/console.json"
+        }
+      }
+    },
+    "foundry-23/foundry-simple-storage-f23/lib/forge-std/src/console2.sol": {
+      "lastModificationDate": 1700549042906,
+      "contentHash": "491ca717c1915995e78cc361485a3067",
+      "sourceName": "foundry-23/foundry-simple-storage-f23/lib/forge-std/src/console2.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "metadata": {
+            "useLiteralContent": false,
+            "bytecodeHash": "ipfs",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "paris",
+          "libraries": {}
+        }
+      },
+      "imports": [],
+      "versionRequirement": ">=0.4.22, <0.9.0",
+      "artifacts": {
+        "console2": {
+          "0.8.19+commit.7dd6d404.Linux.gcc": "console2.sol/console2.json"
+        }
+      }
+    },
+    "foundry-23/foundry-simple-storage-f23/lib/forge-std/src/interfaces/IMulticall3.sol": {
+      "lastModificationDate": 1700549042906,
+      "contentHash": "7b131ca1ca32ef6378b7b9ad5488b901",
+      "sourceName": "foundry-23/foundry-simple-storage-f23/lib/forge-std/src/interfaces/IMulticall3.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "metadata": {
+            "useLiteralContent": false,
+            "bytecodeHash": "ipfs",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "paris",
+          "libraries": {}
+        }
+      },
+      "imports": [],
+      "versionRequirement": ">=0.6.2, <0.9.0",
+      "artifacts": {
+        "IMulticall3": {
+          "0.8.19+commit.7dd6d404.Linux.gcc": "IMulticall3.sol/IMulticall3.json"
+        }
+      }
+    },
+    "foundry-23/foundry-simple-storage-f23/lib/forge-std/src/safeconsole.sol": {
+      "lastModificationDate": 1700549042910,
+      "contentHash": "ac3b1bf5a444db5db3656021830258a8",
+      "sourceName": "foundry-23/foundry-simple-storage-f23/lib/forge-std/src/safeconsole.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "metadata": {
+            "useLiteralContent": false,
+            "bytecodeHash": "ipfs",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "paris",
+          "libraries": {}
+        }
+      },
+      "imports": [],
+      "versionRequirement": ">=0.6.2, <0.9.0",
+      "artifacts": {
+        "safeconsole": {
+          "0.8.19+commit.7dd6d404.Linux.gcc": "safeconsole.sol/safeconsole.json"
+        }
+      }
+    },
+    "foundry-23/foundry-simple-storage-f23/script/DeploySimpleStorage.s.sol": {
+      "lastModificationDate": 1700550126177,
+      "contentHash": "bfce8c9b96ba0a588c05173ad9663adf",
+      "sourceName": "foundry-23/foundry-simple-storage-f23/script/DeploySimpleStorage.s.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "metadata": {
+            "useLiteralContent": false,
+            "bytecodeHash": "ipfs",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "paris",
+          "libraries": {}
+        }
+      },
+      "imports": [
+        "foundry-23/foundry-simple-storage-f23/lib/forge-std/src/Base.sol",
+        "foundry-23/foundry-simple-storage-f23/lib/forge-std/src/Script.sol",
+        "foundry-23/foundry-simple-storage-f23/lib/forge-std/src/StdChains.sol",
+        "foundry-23/foundry-simple-storage-f23/lib/forge-std/src/StdCheats.sol",
+        "foundry-23/foundry-simple-storage-f23/lib/forge-std/src/StdJson.sol",
+        "foundry-23/foundry-simple-storage-f23/lib/forge-std/src/StdMath.sol",
+        "foundry-23/foundry-simple-storage-f23/lib/forge-std/src/StdStorage.sol",
+        "foundry-23/foundry-simple-storage-f23/lib/forge-std/src/StdStyle.sol",
+        "foundry-23/foundry-simple-storage-f23/lib/forge-std/src/StdUtils.sol",
+        "foundry-23/foundry-simple-storage-f23/lib/forge-std/src/Vm.sol",
+        "foundry-23/foundry-simple-storage-f23/lib/forge-std/src/console.sol",
+        "foundry-23/foundry-simple-storage-f23/lib/forge-std/src/console2.sol",
+        "foundry-23/foundry-simple-storage-f23/lib/forge-std/src/interfaces/IMulticall3.sol",
+        "foundry-23/foundry-simple-storage-f23/lib/forge-std/src/safeconsole.sol",
+        "foundry-23/foundry-simple-storage-f23/src/SimpleStorage.sol"
+      ],
+      "versionRequirement": "=0.8.19",
+      "artifacts": {
+        "DeploySimpleStorage": {
+          "0.8.19+commit.7dd6d404.Linux.gcc": "DeploySimpleStorage.s.sol/DeploySimpleStorage.json"
+        }
+      }
+    },
+    "foundry-23/foundry-simple-storage-f23/src/SimpleStorage.sol": {
+      "lastModificationDate": 1700549041342,
+      "contentHash": "ed0be2da3b143771aef435c0ed3b73b3",
+      "sourceName": "foundry-23/foundry-simple-storage-f23/src/SimpleStorage.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "metadata": {
+            "useLiteralContent": false,
+            "bytecodeHash": "ipfs",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "paris",
+          "libraries": {}
+        }
+      },
+      "imports": [],
+      "versionRequirement": "=0.8.19",
+      "artifacts": {
+        "SimpleStorage": {
+          "0.8.19+commit.7dd6d404.Linux.gcc": "SimpleStorage.sol/SimpleStorage.json"
+        }
+      }
+    }
+  }
+}
