@@ -11,14 +11,16 @@ contract FundMe {
     using PriceConverter for uint256;
 
     mapping(address => uint256) public addressToAmountFunded;
-    address[] public funders;
+    address[] public funders;   // daftar orang2 yang mengirimkan crypto 
 
     // Could we make this constant?  /* hint: no! We should make it immutable! */
     address public /* immutable */ i_owner;
     uint256 public constant MINIMUM_USD = 5 * 10 ** 18;
+    AggregatorV3Interface private s_priceFeed;  // variabel untuk menyimpan pricefeed
     
-    constructor() {
+    constructor(address priceFeed) {
         i_owner = msg.sender;
+        s_priceFeed = AggregatorV3Interface(priceFeed); // digunakan untuk mendapatkan adress
     }
 
     function fund() public payable {
@@ -29,7 +31,9 @@ contract FundMe {
     }
     
     function getVersion() public view returns (uint256){
-        AggregatorV3Interface priceFeed = AggregatorV3Interface(0x694AA1769357215DE4FAC081bf1f309aDC325306);
+        AggregatorV3Interface priceFeed = AggregatorV3Interface(
+            0x694AA1769357215DE4FAC081bf1f309aDC325306
+            );
         return priceFeed.version();
     }
     
