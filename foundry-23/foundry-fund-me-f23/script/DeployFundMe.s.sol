@@ -6,9 +6,10 @@ import {Script} from "../lib/forge-std/src/Script.sol";
 import {FundMe} from "../src/FundMe.sol";
 
 contract DeployFundMe is Script{
-    function run() external {
+    function run() external returns (FundMe) {
         vm.startBroadcast();
-        new FundMe();
+        FundMe fundMe=  new FundMe(0x143db3CEEfbdfe5631aDD3E50f7614B6ba708BA7);
         vm.stopBroadcast();
+        return fundMe;
     }
 }
