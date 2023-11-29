@@ -32,6 +32,7 @@ contract HelperConfig is Script{
             return sepoliaConfig;
     } 
 
+    // jika yang digunakan adalah configurasi anvil
     function getOrCreateAnvilEthConfig() public returns (NetworkConfig memory) {
 
         if(activeNetworkConfig.priceFeed != address(0)){    //default value

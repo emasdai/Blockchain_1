@@ -23,8 +23,17 @@ contract FundMeTest is Test{
         assertEq(fundMe.i_owner(), msg.sender);
     }
 
-    // function testPriceFeedisAccurate() public {
-    //     uint256 version = fundMe.getVersion();
-    //     assertEq(version, 4);
-    // }
+    function testPriceFeedisAccurate() public {
+        uint256 version = fundMe.getVersion();
+        assertEq(version, 4);
+    }
+
+    function testFundFailsMewithEnoughEth() public {
+        vm.expectRevert();  // line setelah ini haruslah salah, secara logika dan fungsi
+        fundMe.fund();
+    }
+
+    function testFundDataUpdateStructure() public {
+        fundMe.fund{value: 10e18}();    // mengirim lebih dari 5 dollar ( minimum di FundMe.sol)
+    }
 }
