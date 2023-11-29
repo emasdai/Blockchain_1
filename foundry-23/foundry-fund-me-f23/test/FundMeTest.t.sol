@@ -84,12 +84,27 @@ contract FundMeTest is Test{
     }
 
     function testWithDrawFromMultipleFunders() public funded() {
+        // Arrrange
         uint160 numberOfFunder = 10;
         uint160 startingFunderIndex = 2;
         for(uint160 i = startingFunderIndex; i < numberOfFunder; i++){  // menggunakan uint160
             hoax(address(i), SEND_VALUE); // hoax = prank + deal, menambahkan address dan ether value 
             fundMe.fund{value: SEND_VALUE}();   // value sudah diset dari awal di SEND_VALUE 
         }
+        uint256 startingOwnerBalance = fundMe.getOwner().balance;
+        uint256 startingFundMeBalance = address(fundMe).balance;
+
+        // Act
+        vm.startPrank(fundMe.getOwner());    // sama seperti startbroadcast hanya owner yang bisa withdraw   
+        fundMe.withdraw();
+        vm.stopPrank();
+
+        //Assert
+        assert(address(fundMe).balance == 0);
+        assert(startingFundMeBalance + startingOwnerBalance == fundMe.getOwner().balance);
+
+
+
     }
 
 }
