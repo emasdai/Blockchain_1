@@ -54,10 +54,14 @@ contract FundMeTest is Test{
         assertEq(funder, USER); // memastikan funder adalah user
     }
 
-    function testOnlyOwnerCanWithdraw() public {
+    modifier funded() {
         vm.prank(USER);
         fundMe.fund{value: SEND_VALUE}();
+        _; // modifier selalu diakhiri dengan _ 
+    }
 
+    function testOnlyOwnerCanWithdraw() public funded() {
+         
         vm.prank(USER);
         vm.expectRevert();  // next line haruslah revert
         fundMe.withdraw();
