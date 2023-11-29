@@ -9,10 +9,15 @@ import {DeployFundMe} from "../script/DeployFundMe.s.sol";
 contract FundMeTest is Test{
     FundMe fundMe;
 
+    address USER = makeAddr("user");    // digunakan untuk melakukan testing orang yang akan mengirimkan cypto
+    uint256 constant SEND_VALUE = 1 ether;
+    uint256 constant STARTING_BALANCE = 10 ether;
+
     function setUp() external {
         // fundMe = new FundMe(0x143db3CEEfbdfe5631aDD3E50f7614B6ba708BA7);
         DeployFundMe deployFundMe = new DeployFundMe();
         fundMe = deployFundMe.run();
+        vm.deal(USER, STARTING_BALANCE);    // set percobaan dengan balance dan value yang sudah ditetapkan
     }
 
     function testMInimumDollar() public {
@@ -34,6 +39,10 @@ contract FundMeTest is Test{
     }
 
     function testFundDataUpdateStructure() public {
-        fundMe.fund{value: 10e18}();    // mengirim lebih dari 5 dollar ( minimum di FundMe.sol)
+        vm.prank(USER);
+        fundMe.fund{value: SEND_VALUE}();    // mengirim lebih dari 5 dollar ( minimum di FundMe.sol)
+
+        uint256 amountFunded = fundMe.getAddresstoAmountFunded(USER);
+        assertEq(amountFunded, SEND_VALUE); // memastikan jumlah yang di fund sama dengan SEND_VALUE
     }
 }

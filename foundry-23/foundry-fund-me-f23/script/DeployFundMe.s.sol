@@ -14,7 +14,7 @@ contract DeployFundMe is Script{
 
         // saat mengunakan transaksi sebenarnya.
         vm.startBroadcast();
-        FundMe fundMe=  new FundMe(ethUsdPriceFeed);
+        FundMe fundMe= new FundMe(ethUsdPriceFeed);
         vm.stopBroadcast();
         return fundMe;
     }
