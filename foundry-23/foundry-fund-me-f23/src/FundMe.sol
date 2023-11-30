@@ -39,9 +39,22 @@ contract FundMe {
         if (msg.sender != i_owner) revert FundMe_NotOwner();
         _;
     }
+
+    function cheaperWithDraw() public { // untuk optimalisasi gas fee, sapa seperti function withdraw
+        uint256 funderLength = s_funders.length;    // banyaknya funders
+        for (uint256 funderIndex = 0; funderIndex < funderLength; funderIndex++) {
+            address funder = s_funders[funderIndex];    // index dari para funders
+            s_addressToAmountFunded[funder] = 0;
+        }
+        s_funders = new address[](0);
+        // call
+        (bool callSuccess, ) = payable(msg.sender).call{value: address(this).balance}("");
+        require(callSuccess, "Call failed");
+    }
     
+    // digunakan untuk melakukan withdraw
     function withdraw() public onlyOwner {
-        for (uint256 funderIndex=0; funderIndex < s_funders.length; funderIndex++){
+        for (uint256 funderIndex=0; funderIndex < s_funders.length;funderIndex++){
             address funder = s_funders[funderIndex];
             s_addressToAmountFunded[funder] = 0;
         }

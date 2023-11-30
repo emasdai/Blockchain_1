@@ -12,6 +12,7 @@ contract FundMeTest is Test{
     address USER = makeAddr("user");    // digunakan untuk melakukan testing orang yang akan mengirimkan cypto
     uint256 constant SEND_VALUE = 1 ether;
     uint256 constant STARTING_BALANCE = 10 ether;
+    uint256 constant GAS_PRICE = 1;
 
     function setUp() external {
         // fundMe = new FundMe(0x143db3CEEfbdfe5631aDD3E50f7614B6ba708BA7);
@@ -74,8 +75,10 @@ contract FundMeTest is Test{
         uint256 startingOwnerBalance = fundMe.getOwner().balance;
         uint256 startingFundMeBalance = address(fundMe).balance;
         // Act
+        
         vm.prank(fundMe.getOwner());    // hanya owner yang bisa withdraw   
         fundMe.withdraw();
+
         // Assert
         uint256 endingOwnerBalance = fundMe.getOwner().balance;
         uint256 endingFundMeBalance = address(fundMe).balance;
@@ -102,9 +105,27 @@ contract FundMeTest is Test{
         //Assert
         assert(address(fundMe).balance == 0);
         assert(startingFundMeBalance + startingOwnerBalance == fundMe.getOwner().balance);
+    }
 
+    function testWithDrawFromMultipleFundersChiper() public funded() {
+        // Arrrange
+        uint160 numberOfFunder = 10;
+        uint160 startingFunderIndex = 2;
+        for(uint160 i = startingFunderIndex; i < numberOfFunder; i++){  // menggunakan uint160
+            hoax(address(i), SEND_VALUE); // hoax = prank + deal, menambahkan address dan ether value 
+            fundMe.fund{value: SEND_VALUE}();   // value sudah diset dari awal di SEND_VALUE 
+        }
+        uint256 startingOwnerBalance = fundMe.getOwner().balance;
+        uint256 startingFundMeBalance = address(fundMe).balance;
 
+        // Act
+        vm.startPrank(fundMe.getOwner());    // sama seperti startbroadcast hanya owner yang bisa withdraw   
+        fundMe.cheaperWithDraw();   //menggunakan function cheaperwithdraw agar gas fee optimize
+        vm.stopPrank();
 
+        //Assert
+        assert(address(fundMe).balance == 0);
+        assert(startingFundMeBalance + startingOwnerBalance == fundMe.getOwner().balance);
     }
 
 }
