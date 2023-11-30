@@ -10,7 +10,7 @@ import {DevOps} from "foundry-23/foundry-fund-me-f23/lib/foundry-devops/src/DevO
 
 contract FundFundMe is Script{
     function run() external {
-        
+        address MostRecentyDeploy = DevOpsTools.get_most_recent_deployment("FundMe", block.chainid);
     }   
 }
 
